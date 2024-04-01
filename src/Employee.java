@@ -14,7 +14,7 @@ public class Employee {
     }
 
     public String getFullName() {
-        return id + ")" + fullName;
+        return fullName + "(id: " + id + ")";
     }
 
     public int getDepartment() {
@@ -35,7 +35,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return id + ")ФИО сотрудника: " + fullName + ". Отдел: " + department + ". Зарплата сотрудника: " + salary +
+        return "ФИО сотрудника: " + fullName + ". Отдел: " + department + ". Зарплата сотрудника: " + salary +
                 " id: " + id;
     }
 
