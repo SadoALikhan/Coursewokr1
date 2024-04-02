@@ -16,17 +16,23 @@ public class Main {
         return totalEmployeeSum;
     }
 
-    public static void minAndMaxSalary() {
+    public static void minSalary() {
         Employee minSalary =  employees[0];
-        Employee  maxSalary = employees[0];
-        for ( Employee minAndMaxSalary : employees) {
-            if (minAndMaxSalary.getSalary() < minSalary.getSalary()) {
-                minSalary = minAndMaxSalary;
-            } else if (minAndMaxSalary.getSalary() > maxSalary.getSalary()) {
-                maxSalary = minAndMaxSalary;
+        for ( Employee salary : employees) {
+            if (salary.getSalary() < minSalary.getSalary()) {
+                minSalary = salary;
             }
         }
         System.out.println("Сотрудник с мнимальной ЗП: " + minSalary);
+    }
+
+    public static void maxSalary() {
+        Employee  maxSalary = employees[0];
+        for (Employee salary: employees) {
+            if (salary.getSalary() > maxSalary.getSalary()) {
+                maxSalary = salary;
+            }
+        }
         System.out.println("Сотрудник с максимальной ЗП: " + maxSalary);
     }
 
@@ -58,8 +64,10 @@ public class Main {
         printEmployees();
         System.out.println("Задача 8.b: ");
         System.out.println("Сумму затрат на ЗП в месяц: " + calculateSum());
-        System.out.println("Задача 8.c и 8.d:");
-        minAndMaxSalary();
+        System.out.println("Задача 8.c:");
+        minSalary();
+        System.out.println("Задача 8.d:");
+        maxSalary();
         System.out.println("Задача 8.e");
         averageSalary();
         System.out.println("Задача 8.f");

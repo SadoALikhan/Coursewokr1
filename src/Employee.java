@@ -1,5 +1,4 @@
 public class Employee {
-    private static final Employee[] employees = new Employee[10];
     private final String fullName;
     private int department;
     private double salary;
@@ -52,5 +51,4 @@ public class Employee {
     public int hashCode() {
         return java.util.Objects.hash(fullName);
     }
-
 }
